@@ -1,4 +1,4 @@
-# first_project_infovis
+# Primo progetto infovis - Pie Chart con animazioni
 Mini progetto d3.js per il corso di Visualizzazione delle Informazioni, Università Roma Tre, a.a. 2018-2019.
 
 ## Specifiche del progetto
