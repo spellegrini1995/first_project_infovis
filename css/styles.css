@@ -17,7 +17,7 @@ body {
 .font {
   font-size: 14px;
   font-weight: bold;
-  line-height: 18px;
+  line-height: 10px;
   color: darkgray;
 }
 
@@ -41,7 +41,7 @@ rect.disabled {
   display: block;
   width: 800px;
   cursor: pointer;
-  top: 30px;
+  top: 5px;
 }
 
 /* tooltip */
