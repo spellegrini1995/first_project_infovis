@@ -9,10 +9,9 @@ torta questo si scambia di posto con lo spicchio di torta successivo (il success
 </p>
 
 ## Funzionalità aggiuntive
-<p align="justify">
-- Passando con il mouse sugli spicchi della torta che rappresentano le varie regioni italiane è possibile visionare alcuni dettagli come il nome e la popolazione della regione e la percentuale rispetto al totale della popolazione italiana;
-- Cliccando sui rettangoli colorati della legenda è possibile escludere la regione da essi rappresentata dal diagramma a torta.
-</p>
+- 
+Passando con il mouse sugli spicchi della torta che rappresentano le varie regioni italiane è possibile visionare alcuni dettagli come il nome e la popolazione della regione e la percentuale rispetto al totale della popolazione italiana; </p>
+- <p align="justify"> Cliccando sui rettangoli colorati della legenda è possibile escludere la regione da essi rappresentata dal diagramma a torta. </p>
 
 ## Anteprima grafica
 ![alt text](anteprima_piechart.PNG "Pie Chart")
