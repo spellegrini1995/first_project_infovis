@@ -9,4 +9,4 @@ torta questo si scambia di posto con lo spicchio di torta successivo (il success
 </div>
 
 ## Anteprima grafica
-![alt text](anteprima_piechart.png "Pie Chart")
+![alt text](anteprima_piechart.PNG "Pie Chart")
