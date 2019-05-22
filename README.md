@@ -19,8 +19,8 @@ Le seguenti funzionalità, seppur non richieste in maniera esplicita, rendono mi
 ## Caricamento dati da file esterno
 <p align="justify"> Qualora si volessero caricare i dati da file esterno, potremmo riscontrare dei problemi di sicurezza relativi alle politiche usate dal particolare Web Browser scelto. Per questo motivo, bisogna usare un server http.
 <ul>
-<li>Su un terminale Windows, dal prompt dei comandi bisogna spostarsi nella cartella in cui si trova il file index.html e, avendo Python installato, bisogna digitare il comando: <i><b>python -m http.server [porta]</b></i>. </li>
-<li>Su un terminale Linux, dal prompt dei comandi bisogna spostarsi nella cartella in cui si trova il file index.html e, avendo Python installato, bisogna digitare il comando: <i><b>python -m SimpleHTTPServer [porta]</b></i> o l'equivalente per Python3 <i><b>python3 -m http.server [porta]</b></i>. </li>
+<li> <p align="justify">Su un terminale Windows, dal prompt dei comandi bisogna spostarsi nella cartella in cui si trova il file index.html e, avendo Python installato, bisogna digitare il comando: <i><b>'python -m http.server [porta]'</b></i>. </li> </p>
+<li> <p align="justify">Su un terminale Linux, dal prompt dei comandi bisogna spostarsi nella cartella in cui si trova il file index.html e, avendo Python installato, bisogna digitare il comando: <i><b>'python -m SimpleHTTPServer [porta]'</b></i> o l'equivalente per Python3 <i><b>'python3 -m http.server [porta]'</b></i>. </li></p>
   </ul>
 </p>
 
