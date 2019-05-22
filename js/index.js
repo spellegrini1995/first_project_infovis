@@ -1,11 +1,4 @@
-	/* ATTENZIONE!!! 
-	Poichè i dati sono caricati da file esterno, potrebbero esserci dei problemi di sicurezza relativi alle politiche di 
-	sicurezza usate dai particolari Web Browser.
-	- Con Mozilla Firefox, funziona tutto bene.
-	- Con Chrome bisogna settare opportunamente l'attributo di sicurezza Allow-Control-Allow-Origin del CORB.
-
-	In alternativa, sostituire la seguente variabile
-	var dataset =
+var dataset =
 	[
 	{
 		"regione": "Abruzzo",
@@ -88,10 +81,6 @@
 		"popolazione": 4903722
 	}
 ]
-
-al posto di d3.json("data/dataset_infovis.json").then(function(dataset){ e togliere la parentesi graffa all'ultima riga del codice
-*/
-	d3.json("data/dataset_infovis.json").then(function(dataset){
 	
 	function update() {
 	path = d3.select("#chart").selectAll("path").data(pie(dataset));
@@ -177,7 +166,7 @@ al posto di d3.json("data/dataset_infovis.json").then(function(dataset){ e togli
 	.attr('class', 'percent'); 
 
 	dataset.forEach(function(d) {
-	    d.enabled = true;                                         // NEW
+	    d.enabled = true;                                         
 	});
 
 	// creating the chart
@@ -189,7 +178,7 @@ al posto di d3.json("data/dataset_infovis.json").then(function(dataset){ e togli
 	.attr('fill', function(d) { 
 		return color(d.data.regione);
 	})
-	  .each(function(d) { this._current = d; });                // NEW
+	  .each(function(d) { this._current = d; });                
 
 
 	// mouse event handlers 
@@ -275,6 +264,5 @@ al posto di d3.json("data/dataset_infovis.json").then(function(dataset){ e togli
 	.attr('x', legendRectSize + legendSpacing)
 	.attr('y', legendRectSize - legendSpacing)
 	.text(function(d) { return d; });
-
-});
+	
 
