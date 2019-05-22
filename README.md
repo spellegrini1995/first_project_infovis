@@ -15,12 +15,13 @@ Le seguenti funzionalità, seppur non richieste in maniera esplicita, rendono mi
 
 ## Caricamento dati da file esterno
 <p align="justify"> Se si volessero caricare i dati da file esterno, potrebbero rilevarsi dei problemi di sicurezza relativi alle politiche usate dal particolare Web Browser scelto. Per questo motivo, bisogna usare un server http.
-  In Windows, da terminale andare nella cartella del file html e, se avendo Python installato, digitare il comando: "python -m http.server [porta]". </p>
+  In Windows, da terminale andare nella cartella del file html e, se avendo Python installato, digitare il comando: <i>python -m http.server [porta]</i>. </p>
 Inoltre, ci possono riscontrarsi problemi di compatibilità dovuti al tipo di browser:
-- Con Mozilla Firefox funziona tutto bene.
-- Con Chrome bisogna settare opportunamente l'attributo di sicurezza Acces-Control-Allow-Origin del CORS.
-<p align="justify"> Rispetto al codice originale, se si volesse caricare il file json da filesystem, sostituire la variabile dataset con il seguente comando: <i>d3.json("data/dataset_infovis.json").then(function(dataset){</i> e inserire una parentesi tonda e una graffa nell'ultima riga del file.
-</p>
+<ul>
+  <li>Con Mozilla Firefox funziona tutto bene.</li>
+<li> Con Chrome bisogna settare opportunamente l'attributo di sicurezza Acces-Control-Allow-Origin del CORS.</li>
+  </ul>
+<p align="justify"> Rispetto al codice originale, se si volesse caricare il file json da filesystem, sostituire la variabile dataset con il seguente comando: <i>d3.json("data/dataset_infovis.json").then(function(dataset){</i> e inserire una parentesi tonda e una graffa nell'ultima riga del file.</p>
 
 ## Anteprima grafica
 ![alt text](anteprima_piechart.PNG "Pie Chart")
