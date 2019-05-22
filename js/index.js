@@ -87,6 +87,7 @@ var dataset =
 ] */
 
 d3.json("dataset_infovis.json").then(function(dataset){
+
 function update() {
 path = d3.select("#chart").selectAll("path").data(pie(dataset));
 path.transition()
@@ -191,9 +192,9 @@ path.on('mouseover', function(d) {
 	var total = d3.sum(dataset.map(function(d) {          
 		return (d.enabled) ? d.popolazione : 0;                                      
 	}));                                                      
-	tooltip.select('.regione').html(d.data.regione);        
+	tooltip.select('.regione').html(d.data.regione.bold());        
 	tooltip.select('.popolazione').html('Popolazione: '+d3.format(",")(d.data.popolazione));    
-	tooltip.select('.percent').html(d3.format(",.2%")(d.data.popolazione / total));          
+	tooltip.select('.percent').html("Percentuale: "+d3.format(",.2%")(d.data.popolazione / total));          
 	tooltip.style('display', 'block');                    
 });                                                           
 
