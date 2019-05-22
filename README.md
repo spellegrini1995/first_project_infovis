@@ -14,7 +14,7 @@ Le seguenti funzionalità, seppur non richieste in maniera esplicita, rendono mi
 - <p align="justify"> Cliccando sui rettangoli colorati della legenda è possibile escludere la regione da essi rappresentata dal diagramma a torta. </p>
 
 ## Caricamento dati da file esterno
-<p align="justify"> Se si volessero caricare i dati da file esterno ![alt text](https://github.com/spellegrini1995/first_project_infovis/blob/master/data/dataset_infovis.json "JSON"), potrebbero rilevarsi dei problemi di sicurezza relativi alle politiche usate dal particolare Web Browser scelto. Per questo motivo, bisogna usare un server http.
+<p align="justify"> Se si volessero caricare i dati da file esterno [dataset_infovis.json](data/dataset_infovis.json), potrebbero rilevarsi dei problemi di sicurezza relativi alle politiche usate dal particolare Web Browser scelto. Per questo motivo, bisogna usare un server http.
   In Windows, da terminale andare nella cartella del file html e, se avendo Python installato, digitare il comando: "python -m http.server [porta]".
 	Inoltre, ci possono riscontrarsi problemi di compatibilità dovuti al tipo di browser:
 	- Con Mozilla Firefox funziona tutto bene.
