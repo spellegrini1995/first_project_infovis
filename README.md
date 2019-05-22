@@ -13,7 +13,6 @@ La versione di [d3.js](https://github.com/d3/d3) utilizzata per questo mini prog
 
 ## Funzionalità aggiuntive
 Le seguenti funzionalità, seppur non richieste in maniera esplicita, rendono migliore la visualizzazione del Pie Chart:
-- <p align="justify"> Caricamento dati da file esterno. </p>
 - <p align="justify"> Passando con il mouse sugli spicchi della torta che rappresentano le varie regioni italiane è possibile visionare alcuni dettagli come il nome e la popolazione della regione e la percentuale rispetto al totale della popolazione italiana; </p>
 - <p align="justify"> Cliccando sui rettangoli colorati della legenda è possibile escludere la regione da essi rappresentata dal diagramma a torta. </p>
 
