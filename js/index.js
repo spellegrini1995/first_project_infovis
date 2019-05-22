@@ -1,5 +1,6 @@
 /*
 VEDI README, SEZIONE CARICAMENTO DATI ESTERNO
+In caso di problemi, utilizzare la variabile sottostante come fonte dei dati
 
 var dataset =
 [
