@@ -1,95 +1,98 @@
-	var dataset = [
+	/* ATTENZIONE!!! 
+	Poichè i dati sono caricati da file esterno, potrebbero esserci dei problemi di sicurezza relativi alle politiche di 
+	sicurezza usate dai particolari Web Browser.
+	- Con Mozilla Firefox, funziona tutto bene.
+	- Con Chrome bisogna settare opportunamente l'attributo di sicurezza Allow-Control-Allow-Origin del CORB.
+
+	In alternativa, sostituire la seguente variabile
+	var dataset =
+	[
 	{
-		regione: "Abruzzo",
-		popolazione: 1315196
+		"regione": "Abruzzo",
+		"popolazione": 1315196
 	},
 	{
-		regione: "Basilicata",
-		popolazione: 567118
+		"regione": "Basilicata",
+		"popolazione": 567118
 	},
 	{
-		regione: "Calabria",
-		popolazione: 1956687
+		"regione": "Calabria",
+		"popolazione": 1956687
 	},
 	{
-		regione: "Campania",
-		popolazione: 5826860
+		"regione": "Campania",
+		"popolazione": 5826860
 	},
 	{
-		regione: "Emilia-Romagna",
-		popolazione: 4452629
+		"regione": "Emilia-Romagna",
+		"popolazione": 4452629
 	},
 	{
-		regione: "Friuli Venezia Giulia",
-		popolazione: 1216853	
+		"regione": "Friuli Venezia Giulia",
+		"popolazione": 1216853	
 	},
 	{
-		regione: "Lazio",
-		popolazione: 5896693
+		"regione": "Lazio",
+		"popolazione": 5896693
 	},
 	{
-		regione: "Liguria",
-		popolazione: 1556981	
+		"regione": "Liguria",
+		"popolazione": 1556981	
 	},
 	{
-		regione: "Lombardia",
-		popolazione: 10036258
+		"regione": "Lombardia",
+		"popolazione": 10036258
 	},
 	{
-		regione: "Marche",
-		popolazione: 1531753	
+		"regione": "Marche",
+		"popolazione": 1531753	
 	},
 	{
-		regione: "Molise",
-		popolazione: 308493
+		"regione": "Molise",
+		"popolazione": 308493
 	},
 	{
-		regione: "Piemonte",
-		popolazione: 4375865
+		"regione": "Piemonte",
+		"popolazione": 4375865
 	},
 	{
-		regione: "Puglia",
-		popolazione: 4048242	
+		"regione": "Puglia",
+		"popolazione": 4048242	
 	},
 	{
-		regione: "Sardegna",
-		popolazione: 1648176
+		"regione": "Sardegna",
+		"popolazione": 1648176
 	},
 	{
-		regione: "Sicilia",
-		popolazione: 5026989	
+		"regione": "Sicilia",
+		"popolazione": 5026989	
 	},
 	{
-		regione: "Toscana",
-		popolazione: 3736968	
+		"regione": "Toscana",
+		"popolazione": 3736968	
 	},
 	{
-		regione: "Trentino-Alto Adige",
-		popolazione: 1067648
+		"regione": "Trentino-Alto Adige",
+		"popolazione": 1067648
 	},
 	{
-		regione: "Umbria",
-		popolazione: 884640
+		"regione": "Umbria",
+		"popolazione": 884640
 	},
 	{
-		regione: "Valle d'Aosta",
-		popolazione: 126202
+		"regione": "Valle d'Aosta",
+		"popolazione": 126202
 	},
 	{
-		regione: "Veneto",
-		popolazione: 4903722
+		"regione": "Veneto",
+		"popolazione": 4903722
 	}
-	]
+]
 
-	/* Se vuoi caricare i dati da file json esterno utilizzare questo comando al posto del precedente.
-	Attenzione!!! I browser bloccano il caricamento dei dati da dile esterni, pertanto potrebbero esserci problemi nel caricamento
-	In windows, andare nella cartella del progetto ed eseguire: "python -m http.server [porta]" (python deve essere installato). Quindi andare
-	sul browser e digitare: localhost:porta
-
-	var dataset = d3.json("dataset_infovis.json").then((data) => {
-	return data;
-	}*/
-
+al posto di d3.json("data/dataset_infovis.json").then(function(dataset){ e togliere la parentesi graffa all'ultima riga del codice
+*/
+	d3.json("data/dataset_infovis.json").then(function(dataset){
+	
 	function update() {
 	path = d3.select("#chart").selectAll("path").data(pie(dataset));
 	path.transition()
@@ -123,26 +126,7 @@
 		};
 	}
 
-	function setRegione(regione, pie){
-		  var rect = d3.select(this);                             // NEW
-	      var enabled = true;                                     // NEW
-	      var totalEnabled = d3.sum(dataset.map(function(d) {     // NEW
-	        return (d.enabled) ? 1 : 0;                           // NEW
-	      }));                                                    // NEW
-	      if (rect.attr('class') === 'disabled') {                // NEW
-	        rect.attr('class', '');                               // NEW
-	      } else {                                                // NEW
-	        if (totalEnabled < 2) return;                         // NEW
-	        rect.attr('class', 'disabled');                       // NEW
-	        enabled = false;                                      // NEW
-	      }                                                       // NEW
-	      pie.value(function(d) {                                 // NEW
-	        if (d.regione === regione) d.enabled = enabled;           // NEW
-	        return (d.enabled) ? d.popolazione : 0;                     // NEW
-	    });   
-
-	  }
-		// chart dimensions
+			// chart dimensions
 		var width = 800;
 		var height = 400;
 
@@ -193,7 +177,7 @@
 	.attr('class', 'percent'); 
 
 	dataset.forEach(function(d) {
-	    d.enabled = true;                                         
+	    d.enabled = true;                                         // NEW
 	});
 
 	// creating the chart
@@ -205,7 +189,7 @@
 	.attr('fill', function(d) { 
 		return color(d.data.regione);
 	})
-	  .each(function(d) { this._current = d; });                
+	  .each(function(d) { this._current = d; });                // NEW
 
 
 	// mouse event handlers 
@@ -292,4 +276,5 @@
 	.attr('y', legendRectSize - legendSpacing)
 	.text(function(d) { return d; });
 
+});
 
