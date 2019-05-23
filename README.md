@@ -25,4 +25,4 @@ Le seguenti funzionalità, seppur non richieste in maniera esplicita, rendono mi
 </p>
 
 ## Anteprima grafica
-![alt text](anteprima_piechart.PNG "Pie Chart")
+![alt text](img/piechart.JPG "Pie Chart")
